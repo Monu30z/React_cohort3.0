@@ -16,10 +16,7 @@ export const ContextProvider = ({ children }) => {
   let decrementQuntity = (id) => {
     setCartData((prev) => {
       return prev.map((val) => {
-    
-       
             return val.id === id ? { ...val,  quntity:  val.quntity - 1 } : val;
-        
       }).filter((item) => item.quntity > 0);
     });
   };
